@@ -4943,6 +4943,7 @@ MonoBehaviour:
   - {fileID: 4940154813999213169, guid: a93e500994a4c9c45aa86ac04520d374, type: 3}
   - {fileID: 6988539246805101311, guid: d039d8876e031754b831f3469bf26f58, type: 3}
   - {fileID: 2300580110712872136, guid: 3d1971c0762b663419acbcdd3b3cb0a8, type: 3}
+  - {fileID: 7566767909220715031, guid: 468b0eeb08858b141b09b8c45917bef5, type: 3}
   respawnTime: 1
   cooldownTime: 1.5
 --- !u!95 &2736634444129441221
