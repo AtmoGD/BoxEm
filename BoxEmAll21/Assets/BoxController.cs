@@ -16,11 +16,14 @@ public class BoxController : MonoBehaviour
     {
         currentCooldownTime -= Time.deltaTime;
 
-        if(Input.GetMouseButtonDown(0) && currentCooldownTime <= 0f)
+        if((Input.GetMouseButtonDown(0)|| Input.GetKeyDown(KeyCode.Space)) && currentCooldownTime <= 0f)
         {
             animator.SetTrigger("Hit");
             currentCooldownTime = cooldownTime;
         }
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+            Application.Quit();
     }
 
     private void OnTriggerEnter(Collider other) {
@@ -31,17 +34,6 @@ public class BoxController : MonoBehaviour
             StartCoroutine(SpawnEnemy());
         }
     }
-
-    // private void OnCollisionEnter(Collision other) {
-    //     // if(currentCooldownTime > 0f) return;
-
-    //     Enemy enemy = other.gameObject.GetComponent<Enemy>();
-    //     if(enemy != null)
-    //     {
-    //         enemy?.GetHit();
-    //         StartCoroutine(SpawnEnemy());
-    //     }
-    // }
 
     IEnumerator SpawnEnemy()
     {
