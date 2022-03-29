@@ -12,6 +12,12 @@ public class BoxController : MonoBehaviour
 
     private float currentCooldownTime = 0f;
 
+    private void Start()
+    {
+        currentCooldownTime = cooldownTime;
+        StartCoroutine(SpawnEnemy());
+    }
+
     void Update()
     {
         currentCooldownTime -= Time.deltaTime;
