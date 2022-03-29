@@ -22,7 +22,7 @@ public class BoxController : MonoBehaviour
     {
         currentCooldownTime -= Time.deltaTime;
 
-        if((Input.GetMouseButtonDown(0)|| Input.GetKeyDown(KeyCode.Space)) && currentCooldownTime <= 0f)
+        if((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && currentCooldownTime <= 0f)
         {
             animator.SetTrigger("Hit");
             currentCooldownTime = cooldownTime;
